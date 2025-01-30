@@ -2,7 +2,7 @@
 
 `infra-scaffold` 是从 [sample](https://github.com/xincao9/infra-framework/tree/main/sample) 项目导出的原型模板，用于快速生成基础设施项目。
 
-## 使用说明
+## [使用说明](https://maven.apache.org/archetype/maven-archetype-plugin/advanced-usage.html)
 
 ### 1. 导出原型模板
 

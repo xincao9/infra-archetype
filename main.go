@@ -12,7 +12,7 @@ import (
 	"text/template"
 )
 
-//go:embed templates/*
+//go:embed templates/infra-template/*
 var embeddedFS embed.FS
 
 type projectInfo struct {

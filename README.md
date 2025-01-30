@@ -1,4 +1,4 @@
-# infra-scaffold
+# infra-archetype
 
 `infra-scaffold` 是从 [sample](https://github.com/xincao9/infra-framework/tree/main/sample) 项目导出的原型模板，用于快速生成基础设施项目。
 

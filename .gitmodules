@@ -1,3 +1,0 @@
-[submodule "templates/infra-template"]
-	path = templates/infra-template
-	url = git@github.com:xincao9/infra-template.git

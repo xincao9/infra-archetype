@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.github.xincao9.archetype</groupId>
+  <artifactId>sample-archetype</artifactId>
+  <version>0.0.2-SNAPSHOT</version>
+  <packaging>maven-archetype</packaging>
+
+  <name>sample-archetype</name>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>kr.motd.maven</groupId>
+        <artifactId>os-maven-plugin</artifactId>
+        <version>1.6.2</version>
+      </extension>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>3.3.1</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>3.3.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <description>Java后端，基础框架</description>
+
+  <url>https://github.com/xincao9/infra-framework/sample</url>
+
+  <developers>
+    <developer>
+      <name>xin.cao</name>
+      <email>xincao9@gmail.com</email>
+      <url>https://github.com/xincao9</url>
+      <organization>xincao9</organization>
+      <organizationUrl>https://github.com/xincao9/</organizationUrl>
+      <roles>
+        <role>owner</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:git@github.com:xincao9/infra-framework.git/sample</connection>
+    <developerConnection>scm:git:git@github.com:xincao9/infra-framework.git/sample</developerConnection>
+    <tag>master</tag>
+    <url>git@github.com:xincao9/infra-framework.git/sample</url>
+  </scm>
+</project>

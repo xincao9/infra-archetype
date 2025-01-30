@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: application
+  redis:
+    url: redis://:@127.0.0.1:6379
+    host: localhost
+    username: ''
+    password: ''
+    port: 6379
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:file:/tmp/sample
+    username: root
+    password: 123456
+  sql:
+    init:
+      schema-locations: classpath:db/schema-h2.sql
+      data-locations: classpath:db/data-h2.sql
+      mode: always
+  h2:
+    console:
+      enable: true
+      path: /h2-console
+server:
+  port: 8080
+infra:
+  trace:
+    enable: true
+    zipkin:
+      url: "http://localhost:9411/api/v2/spans"
+      sampler: "1.0F"
+grpc:
+  pure:
+    app-name: greeter
+    server:
+      port: 9999
+    discovery:
+      type: nacos
+      nacos:
+        address: 127.0.0.1:8848
+        username: nacos
+        password: nacos

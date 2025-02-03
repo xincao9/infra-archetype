@@ -18,7 +18,9 @@
     <fileSet encoding="UTF-8">
       <directory>src/main/resources</directory>
       <includes>
+        <include>**/*.json</include>
         <include>**/*.yml</include>
+        <include>**/*.yaml</include>
         <include>**/*.sql</include>
       </includes>
     </fileSet>

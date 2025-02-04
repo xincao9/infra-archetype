@@ -38,6 +38,11 @@ mvn archetype:generate -DarchetypeCatalog=local
 
 这样 Maven 会从本地仓库加载模板，并生成新项目。
 
+### 4. 远程原型模板生成项目
+
+```bash
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-app -DarchetypeArtifactId=sample-archetype -DarchetypeGroupId=com.github.xincao9.archetype -DinteractiveMode=false
+```
 ## 注意事项
 
 - 确保你已经安装了 Maven，并且版本符合要求。

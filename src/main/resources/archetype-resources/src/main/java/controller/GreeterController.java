@@ -4,7 +4,7 @@
 package ${package}.controller;
 
 import ${package}.entity.SysUser;
-import ${package}.invoker.GreeterInvoker;
+import ${package}.rpc.invoker.GreeterInvoker;
 import ${package}.service.SysUserService;
 import com.github.xincao9.infra.archetype.GreeterSayRequest;
 import com.github.xincao9.infra.archetype.GreeterSayResponse;
@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
+/**
+ * 演示，一般的业务流程
+ */
 @RestController
 @RequestMapping("greeter")
 public class GreeterController {
@@ -28,10 +31,12 @@ public class GreeterController {
     @RateLimited(permitsPerSecond = 1)
     @GetMapping("say")
     public String say(@RequestParam("name") String name) throws Throwable {
+        // 读取数据库
         SysUser sysUser = sysUserService.findByName(name);
         if (sysUser == null) {
             return null;
         }
+        // 调用grpc服务
         GreeterSayRequest request = GreeterSayRequest.newBuilder().setName(sysUser.getEmail()).build();
         GreeterSayResponse response = greeterInvoker.sayInvoker.apply(request);
         return response.getMessage();

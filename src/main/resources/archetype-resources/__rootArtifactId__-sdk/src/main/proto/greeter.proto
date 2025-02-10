@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package com.github.xincao9.infra.archetype;
+option java_multiple_files = true;
+
+// Greeting 服务定义
+service GreeterRPCService {
+  rpc Say (GreeterSayRequest) returns (GreeterSayResponse);
+}
+
+// Greeting.Say方法请求体
+message GreeterSayRequest {
+  string name = 1;
+}
+
+// Greeting.Say方法请求体响应体
+message GreeterSayResponse {
+  string message = 1;
+}
